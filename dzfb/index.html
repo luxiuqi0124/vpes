@@ -1,0 +1,136 @@
+<!--
+
+# Navigation
+# By: Dreamer-Paul
+# Last Update: 2022.3.11
+
+一个简单的个人首页，让你的朋友方便快捷的，找到你在各站点的社交链接
+
+本代码为奇趣保罗原创，并遵守 MIT 开源协议。欢迎访问我的博客：https://paugram.com
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>万物量产服务器-地址发布</title>
+	<link rel="icon" href="https://vpes.eu.org/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <style>
+        html, body, main{
+            height: 100%;
+        }
+
+        body{
+            margin: 0;
+            user-select: none;
+            font: lighter 16px "微软雅黑";
+        }
+        body:before{
+            content: '';
+            z-index: -1;
+            width: 3000px;
+            height: 3000px;
+            display: block;
+            position: fixed;
+            top: calc(50% - 1500px);
+            left: calc(50% - 1500px);
+            animation: bg-rotate 15s infinite linear;
+            background: linear-gradient(45deg, #20b57d 40%, #258ec5 60%);
+        }
+
+        @keyframes bg-rotate {
+            0%{ transform: rotate(0) }
+            100%{ transform: rotate(360deg) }
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        main{
+            display: table;
+            margin: 0 auto;
+        }
+
+        .content{
+            padding-top: 50px;
+            padding-bottom: 70px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .logo{
+            margin-bottom: 50px;
+        }
+        .logo img{
+            height: auto;
+            max-width: 100px;
+            border-radius: 100%;
+            border: 3px solid #fff;
+            transition: transform 0.3s;
+        }
+        .logo img:hover{
+            transform: scale(1.1, 1.1) rotate(1turn);
+        }
+
+        .links{
+            max-width: 300px;
+        }
+        .links a{
+            color: #fff;
+            display: block;
+            min-width: 80px;
+            padding: 1em 2em;
+            text-align: center;
+            margin-bottom: 1em;
+            border-radius: 100px;
+            border: #fff 1px solid;
+            transition: background 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
+        }
+        .links a:hover{
+            color: #258ec5;
+            background: #fff;
+            transform: scale(1.1, 1.1);
+        }
+        .links a:active{
+            opacity: 0.7;
+            transform: scale(0.9, 0.9);
+        }
+        .links a:last-child{
+            margin-bottom: 0;
+        }
+
+        footer{
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #fff;
+            position: fixed;
+            text-align: center;
+        }
+        footer a{
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <div class="content">
+
+        <div class="links">
+            <a href="#">一周目<br />已于2023年1月19日下线</a>
+            <a href="#">二周目<br />已于2023年1月25日下线</a>
+            <a href="#">三周目<br />axe.0mc.me:19132</a>
+            <a href="#">起床战争<br />bedwar.vpes.eu.org:19132</a>
+			<a href="#">随机空岛<br />已于2023年1月25日下线</a>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© <script>document.write(new Date().getFullYear())</script> By <a href="https://paugram.com" target="_blank">万物量产</a>.</p>
+</footer>
+</body>
+</html>
