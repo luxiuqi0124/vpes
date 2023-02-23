@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -14,61 +14,29 @@
 				<li><a href="https://vpes.eu.org/home">首页</a></li>
 				<li><a href="https://vpes.eu.org/state">状态</a></li>
 				<li><a href="https://vpes.eu.org/true">实景</a></li>
-				<li><a href="https://vpes.eu.org/contact">联系我们</a></li>
+				<li><a href="">联系我们</a></li>
 				<li><a href="https://vpes.eu.org/afd">赞助名单</a></li>
 			</ul>
 		</header>
 		<div class="banner">
 			<h1>联系我们</h1>
 			<br />
+			<h2>请注意，首次登录服务器需进行白名单认证，前往<a class="reg" target="_blank" href="">申请页面</a>进行认证</h2>
+			<br />
 			<h2>一.添加QQ群 <a target="_blank"
 					href="https://qm.qq.com/cgi-bin/qm/qr?k=TsFfAqyAcJzu-1Y_rSA6Dz55qeAalSd7&jump_from=webapi&authKey=QdG9F6pKSb9wh0ft+QvEXuP4Zyf2sXD3PgNHO0diQcjxLugKA2HNA6fUj59ANTsC">
 					<img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="万物量产SServer expires 公告群"
 						title="万物量产Server 公告群"></a></h2>
 			<br />
-			<h2>二.前往<a href="https://vpes.eu.org/dzfb">地址发布页</a></h2>
+			<h2>二.前往<a class="linka" target="_blank" href="https://vpes.eu.org/dzfb">地址发布页</a></h2>
 			<br />
-			<h2>三.发送邮件至<a href="mailto:admin@vpes.eu.org">admin@vpes.eu.org</a></h2>
-			
-			<h1 class="distance_zh_cn_1">服务器到期</h1>
-			<h1 class="distance_zh_cn_2">还剩</h1>
-			<h1 class="distance_zh_cn_3">天</h1>
-			<h4 class="distance_en_us_1">SERVER EXPIRES</h4>
-			<h4 class="distance_en_us_2">IN</h4>
-			<h4 class="distance_en_us_3">DAYS</h4>
-			<div class="line_1"></div>
-			<!-- 新建两个文本，使其动态改变时间 -->
-			<h1 class="time_h1"></h1>
-			<h3 class="time_h3"></h3>
-			<!-- 加载JavaScript和CSS -->
-			<link rel="stylesheet" type="text/css" href="day.css">
-			<script>
-				function show_date_time() {
-					window.setTimeout("show_date_time()", 1000);
-					const BirthDay = new Date("02/21/2023 23:07:39");
-					const today = new Date();
-					const timeold = (BirthDay.getTime() - today.getTime());
-					const sectimeold = timeold / 1000
-					const secondsold = Math.floor(sectimeold);
-					const msPerDay = 24 * 60 * 60 * 1000
-					const e_daysold = timeold / msPerDay
-					const daysold = Math.floor(e_daysold);
-					const e_hrsold = (e_daysold - daysold) * 24;
-					const hrsold = Math.floor(e_hrsold);
-					const e_minsold = (e_hrsold - hrsold) * 60;
-					const minsold = Math.floor((e_hrsold - hrsold) * 60);
-					const seconds = Math.floor((e_minsold - minsold) * 60);
-					document.querySelector(".time_h1").textContent = daysold;
-					document.querySelector(".time_h3").textContent = daysold;
-				}
-				window.addEventListener("load", show_date_time);
-			</script>
+			<h2>三.发送邮件至<a class="linka" href="mailto:admin@vpes.eu.org">admin@vpes.eu.org</a></h2>
+			<br />
 			
 		</div>
 
 		<footer style="background-color: #eee;text-align: center;"><img src="https://vpes.eu.org/ico64.png"
-				width="20px" /><a href="https://icp.gov.moe/?keyword=20230113" target="_blank"
-				style="line-height: 50px;">萌ICP备20230113号</a>|<a href="https://beian.miit.gov.cn/#/Integrated/index"
-				target="_blank" style="line-height: 50px;">皖ICP还没备114514号</a></footer>
+				width="20px" /><a href="https://icp.gov.moe/?keyword=20230113"
+				target="_blank" style="ltext-decoration: none;ine-height: 50px;">萌ICP备20230113号</a></footer>
 	</body>
 </html>

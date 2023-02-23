@@ -124,6 +124,10 @@ header .search .fa-search {
 	border-radius: 50rem
 }
 
+.linka {
+	color: #5b639c;
+	text-decoration: none;
+}
 /*屏幕宽度小于991px,改变布局和样式*/
 @media screen and (max-width:991px) {
 	header {
