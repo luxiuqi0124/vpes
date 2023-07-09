@@ -24,20 +24,21 @@
 			<br />
 			<script type="text/javascript">
 				$.ajax({
-					url: "//motd.imc.re/api?host=47.115.217.231:19132",
-					type: "GET",
-					data: {},
-					dataType: "json",
+					url: "motd.imc.re/api?host=47.115.217.231:19132"，
+					type: "GET"，
+					data: {}，
+					dataType: "jsonp"，
+					jsonpCallBack: "f",
 					success: function(data) {
-						document.getElementById("name").innerHTML = "服务名称：" + data.motd
-						document.getElementById("status").innerHTML = "服务状态：" + data.status;
-						document.getElementById("version").innerHTML = "游戏版本：" + data.version
-						document.getElementById("online").innerHTML = "在线人数：" + data.online + "/" + data.max
-						document.getElementById("gamemode").innerHTML = "游戏模式：" + data.gamemode
-					},
+						document.getElementById("name")。innerHTML = "服务名称：" + data.motd
+						document.getElementById("status")。innerHTML = "服务状态：" + data.status;
+						document.getElementById("version")。innerHTML = "游戏版本：" + data.version
+						document.getElementById("online")。innerHTML = "在线人数：" + data.online + "/" + data.max
+						document.getElementById("gamemode")。innerHTML = "游戏模式：" + data.gamemode
+					}，
 					error: function(msg) {
-						document.getElementById("name").innerHTML = "查询失败"
-					},
+						document.getElementById("name")。innerHTML = "查询失败"
+					}，
 				});
 			</script>
 			<h2 id="name">查询中......</h2>
@@ -48,6 +49,6 @@
 		</div>
 		<footer style="background-color: #eee;text-align: center;"><img src="../ico64.png" width="20px" /><a
 				href="https://icp.gov.moe/?keyword=20230113" target="_blank"
-				style="ltext-decoration: none;ine-height: 50px;">萌ICP备20230113号</a></footer>
+				style="ltext-decoration: 无;ine-height: 50px;">萌ICP备20230113号</a></footer>
 	</body>
 </html>
