@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>万物量产服务器-状态</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 		<link rel="icon" href="../favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="state.css">
 	</head>
@@ -21,11 +22,29 @@
 		<div class="banner">
 			<h1>状态</h1>
 			<br />
-			<p style="text-align:center;
-				">
-				<img src="http://motd.imc.re/status_img?host=47.115.217.231:19132" width="45%" />
-
-			</p>
+			<script type="text/javascript">
+				$.ajax({
+					url: "//motd.imc.re/api?host=47.115.217.231:19132",
+					type: "GET",
+					data: {},
+					dataType: "json",
+					success: function(data) {
+						document.getElementById("name").innerHTML = "服务名称：" + data.motd
+						document.getElementById("status").innerHTML = "服务状态：" + data.status;
+						document.getElementById("version").innerHTML = "游戏版本：" + data.version
+						document.getElementById("online").innerHTML = "在线人数：" + data.online + "/" + data.max
+						document.getElementById("gamemode").innerHTML = "游戏模式：" + data.gamemode
+					},
+					error: function(msg) {
+						document.getElementById("name").innerHTML = "查询失败"
+					},
+				});
+			</script>
+			<h2 id="name">查询中......</h2>
+			<h2 id="status"></h2>
+			<h2 id="version"></h2>
+			<h2 id="online"></h2>
+			<h2 id="gamemode"></h2>
 		</div>
 		<footer style="background-color: #eee;text-align: center;"><img src="../ico64.png" width="20px" /><a
 				href="https://icp.gov.moe/?keyword=20230113" target="_blank"
