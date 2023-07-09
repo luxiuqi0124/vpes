@@ -24,21 +24,21 @@
 			<br />
 			<script type="text/javascript">
 				$.ajax({
-					url: "//motd.imc.re/api?host=47.115.217.231:19132"，
-					type: "GET"，
-					data: {}，
-					dataType: "jsonp"，
-					jsonpCallBack: "f"，
+					url: "//motd.imc.re/api?host=47.115.217.231:19132",
+					type: "GET",
+					data: {},
+					dataType: "jsonp",
+					jsonpCallBack: "f",
 					success: function(data) {
 						document.getElementById("name")。 innerHTML = "服务名称：" + data.motd
 						document.getElementById("status")。 innerHTML = "服务状态：" + data.status;
 						document.getElementById("version")。 innerHTML = "游戏版本：" + data.version
 						document.getElementById("online")。 innerHTML = "在线人数：" + data.online + "/" + data.max
 						document.getElementById("gamemode")。 innerHTML = "游戏模式：" + data.gamemode
-					}，
+					},
 					error: function(msg) {
 						document.getElementById("name")。 innerHTML = "查询失败"
-					}，
+					},
 				});
 			</script>
 			<h2 id="name">查询中......</h2>
