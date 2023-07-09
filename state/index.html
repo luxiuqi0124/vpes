@@ -30,14 +30,14 @@
 					dataType: "jsonp"，
 					jsonpCallBack: "f"，
 					success: function(data) {
-						document.getElementById("name")。innerHTML = "服务名称：" + data.motd
-						document.getElementById("status")。innerHTML = "服务状态：" + data.status;
-						document.getElementById("version")。innerHTML = "游戏版本：" + data.version
-						document.getElementById("online")。innerHTML = "在线人数：" + data.online + "/" + data.max
-						document.getElementById("gamemode")。innerHTML = "游戏模式：" + data.gamemode
+						document.getElementById("name")。 innerHTML = "服务名称：" + data.motd
+						document.getElementById("status")。 innerHTML = "服务状态：" + data.status;
+						document.getElementById("version")。 innerHTML = "游戏版本：" + data.version
+						document.getElementById("online")。 innerHTML = "在线人数：" + data.online + "/" + data.max
+						document.getElementById("gamemode")。 innerHTML = "游戏模式：" + data.gamemode
 					}，
 					error: function(msg) {
-						document.getElementById("name")。innerHTML = "查询失败"
+						document.getElementById("name")。 innerHTML = "查询失败"
 					}，
 				});
 			</script>
