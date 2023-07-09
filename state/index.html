@@ -24,11 +24,11 @@
 			<br />
 			<script type="text/javascript">
 				$.ajax({
-					url: "motd.imc.re/api?host=47.115.217.231:19132"，
+					url: "//motd.imc.re/api?host=47.115.217.231:19132"，
 					type: "GET"，
 					data: {}，
 					dataType: "jsonp"，
-					jsonpCallBack: "f",
+					jsonpCallBack: "f"，
 					success: function(data) {
 						document.getElementById("name")。innerHTML = "服务名称：" + data.motd
 						document.getElementById("status")。innerHTML = "服务状态：" + data.status;
