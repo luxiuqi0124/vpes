@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>万物量产服务器</title>
+		<title>万物量产服务器-首页</title>
 		<link rel="icon" href="../favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="style.css">
 	</head>
@@ -23,8 +23,8 @@
 			<div class="content">
 				<h2>MCBE-万物量产</h2>
 				<h1>原版生存 <del>随机空岛</del></h1>
-				<h1><del>起床战争</del> 建筑创造</h1>
-				<h3>全公益，<del>多</del>玩法的国际基岩版MC服务器</h3>
+				<h1>起床战争 建筑创造</h1>
+				<h3>全公益，多玩法的国际基岩版MC服务器</h3>
 				<h5>由原子世界提供计算服务-<a class="linka" target="_blank"
 						href="https://craft.nullatom.com/?affman=4221">了解原子世界</a>
 				</h5>
@@ -34,15 +34,35 @@
 
 			</div>
 			<br />
-			<img src="1.webp
-" class="image">
+			<img src="1.webp" class="image">
 
 		</div>
-		<footer style="background-color: #eee;text-align: center;"><img src="../ico64.png" width="20px" />
+		<footer style="background-color: #eee;text-align: center;"><img src="../ico64.png" width="20px">
 			<a href="https://icp.gov.moe/?keyword=20230113" target="_blank"
-				style="ltext-decoration: none;ine-height: 50px;">萌ICP备20230113号</a>
-
-			</span>
+				style="text-decoration: none;line-height: 20px;">萌ICP备20230113号</a>
+			<p>服务器稳定运行了:
+				<span id="day-timer"></span>天
+				<span id="hour-timer"></span>小时
+				<span id="minute-timer"></span>分钟</p>
+			<script>
+				function show_date_time() {
+					window.setTimeout("show_date_time()", 1000);
+					const BirthDay = new Date("12/23/2022 00:00:00");
+					const today = new Date();
+					const timeold = (today.getTime() - BirthDay.getTime());
+					const msPerDay = 24 * 60 * 60 * 1000
+					const e_daysold = timeold / msPerDay
+					const daysold = Math.floor(e_daysold);
+					const e_hrsold = (e_daysold - daysold) * 24;
+					const hrsold = Math.floor(e_hrsold);
+					const e_minsold = (e_hrsold - hrsold) * 60;
+					const minsold = Math.floor((e_hrsold - hrsold) * 60);
+					document.querySelector("#day-timer").textContent = daysold;
+					document.querySelector("#hour-timer").textContent = hrsold;
+					document.querySelector("#minute-timer").textContent = minsold;
+				}
+				window.addEventListener("load", show_date_time);
+			</script>
 		</footer>
 	</body>
 
