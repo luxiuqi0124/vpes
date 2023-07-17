@@ -22,30 +22,11 @@
 		<div class="banner">
 			<h1>状态</h1>
 			<br />
-			<script type="text/javascript">
-				$.ajax({
-					url: "https://motd.imc.re/api?host=47.115.217.231:19132",
-					type: "GET",
-					data: {},
-					dataType: "jsonp",
-					jsonpCallBack: "f",
-					success: function(data) {
-						document.getElementById("name").innerHTML = "服务名称：" + data.motd
-						document.getElementById("status").innerHTML = "服务状态：" + data.status;
-						document.getElementById("version").innerHTML = "游戏版本：" + data.version
-						document.getElementById("online").innerHTML = "在线人数：" + data.online + "/" + data.max
-						document.getElementById("gamemode").innerHTML = "游戏模式：" + data.gamemode
-					},
-					error: function(msg) {
-						document.getElementById("name").innerHTML = "查询失败"
-					},
-				});
-			</script>
-			<h2 id="name">查询中......</h2>
-			<h2 id="status"></h2>
-			<h2 id="version"></h2>
-			<h2 id="online"></h2>
-			<h2 id="gamemode"></h2>
+			<div style="text-align: center;letter-spacing: 20px;">
+				<img class="image" src="http://motd.imc.re/status_img?host=s4.vpes.eu.org:10003" />
+				<img class="image" src="http://motd.imc.re/status_img?host=bedwar.vpes.eu.org:19132" />
+			</div>
+
 		</div>
 		<footer style="background-color: #eee;text-align: center;line-height: 30px;">
 			<a href="https://icp.gov.moe/?keyword=20230113" target="_blank"
