@@ -7,6 +7,7 @@
 		<script type="text/javascript" src="jquery-3.7.0.min.js"></script>
 		<link rel="icon" href="../favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="state.css">
+		<script src="jquery-3.7.0.min.js"></script>
 	</head>
 	<body>
 		<header>
@@ -22,13 +23,50 @@
 		<div class="banner">
 			<h1>状态</h1>
 			<br />
-			<div style="text-align: center;letter-spacing: 20px;">
-				<img class="image" src="http://motd.imc.re/status_img?host=s4.vpes.eu.org:10003" />
-				<img class="image" src="http://motd.imc.re/status_img?host=bedwar.vpes.eu.org:19132" />
-			</div>
-
+			<script>
+				$.ajax({
+					url: 'https://api.imlazy.ink/mcapi/?host=s4.vpes.eu.org&port=10003&type=json&be=true',
+					type: 'get',
+					dataType: 'json',
+					crossDomain: true,
+					success: function(data) {
+						document.getElementById("status").innerHTML = data.status;
+						document.getElementById("players_online").innerHTML = data.players_online;
+						document.getElementById("players_max").innerHTML = data.players_max;
+						document.getElementById("version").innerHTML = data.version;
+					},
+					data: {},
+				});
+				$.ajax({
+					url: 'https://api.imlazy.ink/mcapi/?host=bedwar.vpes.eu.org&port=19132&type=json&be=true',
+					type: 'get',
+					dataType: 'json',
+					crossDomain: true,
+					success: function(data) {
+						document.getElementById("status2").innerHTML = data.status;
+						document.getElementById("players_online2").innerHTML = data.players_online;
+						document.getElementById("players_max2").innerHTML = data.players_max;
+						document.getElementById("version2").innerHTML = data.version;
+					},
+					data: {},
+				});
+			</script>
+			<div class="inline-div">
+				<h2>VPE-四周目</h2>
+				<h2>状态：<span id="status">检测中......</span></h2>
+				<h2>人数：<span id="players_online">-</span>/<span id="players_max">-</span></h2>
+				<h2>版本：<span id="version"></span></h2>
+				</div>
+			<div class="inline-div">
+				<h2>起床战争</h2>
+				<h2>状态：<span id="status2">检测中......</span></h2>
+				<h2>人数：<span id="players_online2">-</span>/<span id="players_max2">-</span></h2>
+				<h2>版本：<span id="version2"></span></h2>
+				</div>
 		</div>
-		<footer style="background-color: #eee;text-align: center;line-height: 30px;">
+		<footer style="background-color: #eee;text-align: center;line-height: 25px;">
+			查询接口：<a href="https://api.imlazy.ink/" target="_blank"
+				style="text-decoration: none;color: #5b639c;">雫 API</a><br>
 			<a href="https://icp.gov.moe/?keyword=20230113" target="_blank"
 				style="text-decoration: none;color: #5b639c;">萌ICP备20230113号</a> |
 			<a href="https://github.com/luxiuqi0124/vpes" target="_blank"

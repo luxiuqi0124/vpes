@@ -120,6 +120,11 @@ header .search .fa-search {
 	margin-top: 20px;
 }
 
+.inline-div{
+	display: inline-block;
+	margin-right: 35px;
+	line-height: 35px;
+}
 
 /*屏幕宽度小于991px,改变布局和样式*/
 @media screen and (max-width:991px) {
