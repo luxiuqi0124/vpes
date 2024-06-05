@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>万物量产服务器</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="icon" href="../favicon.ico" type="image/x-icon">
+		<noscript>
+			<link rel="stylesheet" href="../assets/css/noscript.css" />
+		</noscript>
+		<script src="../assets/js/clipboard.min.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="../../index.html">万物量产</a></h1>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+			
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="../index.html">主页</a></li>
+						<li><a href="../state/page/1.html">实景</a></li>
+						<li><a href="./index.html">地址发布</a></li>
+					</ul>
+					<a href="#" class="close">Close</a>
+				</div>
+			</nav>
+
+			<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h2>加入万物量产</h2>
+				</div>
+			</section>
+
+			<!-- Four -->
+			<section id="four" class="wrapper alt style1">
+				<div class="inner">
+					<ul class="actions">
+						<li><a href="../index.html" class="button">返回主页</a></li>
+					</ul>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th style="text-align: center;">名称</th>
+									<th style="text-align: center;">地址</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody style="text-align: center;">
+								<tr>
+									<td>BE-起床战争</td>
+									<td>bedwar.vpes.eu.org:19132</td>
+									<td><button class="btn1" data-clipboard-text="bedwar.vpes.eu.org:19132" id="bt1" onclick="btfun1()">
+											复制地址
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>JE-五周目</td>
+									<td>Coming Soon......</td>
+									<td><button class="btn2" data-clipboard-text="" id="bt2" onclick="btfun2()">
+											复制地址
+										</button></td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="inner">
+					<ul class="contact">
+						<li class="icon solid fa-home"><a target="_blank"
+								href="https://qm.qq.com/q/Sr707XOCK4">QQ-万物量产Server公告群</a>
+						</li>
+						<li class="icon solid fa-envelope"><a href="mailto:admin@vpes.eu.org">admin@vpes.eu.org</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 万物量产服务器 All rights reserved.</li>
+						<li><a href="https://icp.gov.moe/?keyword=20240116" target="_blank">萌ICP备20240116号</a></li>
+						<li><a href="https://github.com/luxiuqi0124/vpes" target="_blank">网页托管于Github</a></li>
+						<li><a href="http://wapmz.com/in/91" target="_blank"><img src="http://wapmz.com/cn/big/91"
+									alt="wapmz.com"></a></li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+		<script>
+			function btfun1() {
+				var clipboard = new ClipboardJS('.btn1');
+				clipboard.on('success', function(e) {
+					var bt1 = document.getElementById('bt1')
+					bt1.innerText = '复制成功';
+				});
+				clipboard.on('error', function(e) {
+					var bt1 = document.getElementById('bt1')
+					bt1.innerText = '复制失败';
+				});
+			}
+
+			function btfun2() {
+				var clipboard = new ClipboardJS('.btn2');
+				clipboard.on('success', function(e) {
+					var bt2 = document.getElementById('bt2')
+					bt2.innerText = '复制成功';
+				});
+				clipboard.on('error', function(e) {
+					var bt2 = document.getElementById('bt2')
+					bt2.innerText = '复制失败';
+				});
+			}
+		</script>
+
+	</body>
+</html>
